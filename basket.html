@@ -68,16 +68,35 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>Produk</h2>
+                <h2>Daftar Belanja</h2>
             </div>
 
-            <ul id="product-category" class="d-flex justify-content-center">
-                <li class="filter-active">All</li>
-            </ul>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col" width="1%">No.</th>
+                        <th scope="col">Nama Produk</th>
+                        <th scope="col" width="1%">Harga</th>
+                        <th scope="col" width="1%">Jumlah</th>
+                        <th scope="col" width="1%" class="text-end">Subtotal</th>
+                        <th scope="col" width="1%">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="daftar-belanja">
 
-            <div id="product-container" class="row product-container" style="position: relative; height: 1267.11px;">
-            </div>
+                </tbody>
 
+                <tfoot>
+                    <tr>
+                        <th colspan="4" class="text-end">Total</th>
+                        <th class="text-end" id="total-harga">Rp. 0</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <!-- Checkout -->
+            <button id="checkout" onclick="checkout()" class="btn btn-success float-end">Checkout</button>
         </div>
     </section>
     <!-- End Product -->
@@ -88,7 +107,7 @@
         crossorigin="anonymous"></script>
 
     <!-- Script -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/basket.js"></script>
 </body>
 
 </html>

@@ -42,7 +42,7 @@ function fetchProduct() {
                         <div class="products-info">
                             <h4>${product.nama_produk}</h4>
                             <p>Rp. ${parseFloat(product.harga).toLocaleString('id-ID')}</p>
-                            <button class="btn btn-primary" onclick="addToBasket(${product.id})"
+                            <button class="btn btn-primary" onclick="addToBasket(${product.id},'${product.nama_produk}','${product.harga}')"
                                 title="Tambahkan ke keranjang">
                                 <i class="bx bx-plus"></i>
                             </button>
@@ -55,10 +55,27 @@ function fetchProduct() {
 
 let basket = [];
 
-function addToBasket(id) {
-    // add to basket
-    // basket.push(id);
+function addToBasket(id, nama, harga) {
+    // check if id same with id in basket
+    const checkId = basket.find((item) => item.id == id);
+
+    if (checkId) {
+        // update qty
+        checkId.qty += 1;
+    } else {
+        // add to basket
+        basket.push({
+            id: id,
+            nama: nama,
+            harga: harga,
+            qty: 1,
+        });
+    }
 
     // set cookie
-    // setCookie("basket", JSON.stringify(basket), 1);
+    setCookie("basket", JSON.stringify(basket), 1);
+
+    // update basket
+    const jumlahPesanan = document.getElementById("jumlah-pesanan");
+    jumlahPesanan.innerHTML = basket.length;
 }
