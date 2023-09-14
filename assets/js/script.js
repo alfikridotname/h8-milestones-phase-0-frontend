@@ -5,7 +5,6 @@ const productContainer = document.getElementById("product-container");
 window.addEventListener("load", () => {
     fetchCategory();
     fetchProduct();
-    fetchGallery();
 });
 
 // Set Cookie
