@@ -483,6 +483,12 @@ section {
     background: #209dd8;
 }
 
+.contact iframe {
+    border: 0;
+    width: 100%;
+    height: 290px;
+}
+
 @keyframes animate-loading {
     0% {
         transform: rotate(0deg);
