@@ -21,6 +21,7 @@ formLogin.addEventListener('submit', (e) => {
                 document.cookie = "token_pt_pupuk_indo_jaya_sukses=" + data.token;
                 logRegContainer.classList.add('d-none');
                 userSuccessLogin.classList.remove('d-none');
+                window.location.href = "product.html";
             } else {
                 alertLogin.classList.remove('d-none');
                 alertLogin.innerHTML = `

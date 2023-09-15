@@ -67,6 +67,16 @@
     <section id="product" class="product mt-4">
         <div class="container">
 
+            <!-- alert-->
+            <div class="alert alert-success d-none" role="alert" id="alert-success">
+                Transaksi berhasil dilakukan!
+            </div>
+
+            <div class="alert alert-danger d-none" role="alert" id="alert-danger">
+                Transaksi gagal dilakukan! Silahkan login terlebih dahulu.
+            </div>
+
+
             <div class="section-title">
                 <h2>Daftar Belanja</h2>
             </div>
@@ -96,7 +106,7 @@
             </table>
 
             <!-- Checkout -->
-            <button id="checkout" onclick="checkout()" class="btn btn-success float-end">Checkout</button>
+            <button id="checkout" onclick="checkout()" class="btn btn-success float-end d-none">Checkout</button>
         </div>
     </section>
     <!-- End Product -->
