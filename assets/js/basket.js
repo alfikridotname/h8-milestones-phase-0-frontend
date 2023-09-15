@@ -128,11 +128,23 @@ function checkout() {
                             let splitData = item.split("=");
                             let convertData = JSON.parse(splitData[ 1 ]);
 
+                            // find userid
+                            let regex = /userid_pt_pupuk_indo_jaya_sukses=([^\;]+)/;
+                            let match = regex.exec(getData);
+                            let userID = 0;
+                            match.forEach((item, key) => {
+                                if (item.includes("userid_pt_pupuk_indo_jaya_sukses")) {
+                                    let splitData = item.split("=");
+                                    userID = splitData[ 1 ];
+                                }
+                            });
+
+
                             fetch("http://127.0.0.1:1993/?page=checkout", {
                                 method: "POST",
                                 body: JSON.stringify({
                                     data: convertData,
-                                    userID: 123
+                                    user_id: userID,
                                 })
                             })
                                 .then((res) => res.json())

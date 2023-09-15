@@ -19,6 +19,7 @@ formLogin.addEventListener('submit', (e) => {
         .then(data => {
             if (data.status == true) {
                 document.cookie = "token_pt_pupuk_indo_jaya_sukses=" + data.token;
+                document.cookie = "userid_pt_pupuk_indo_jaya_sukses=" + data.userID;
                 logRegContainer.classList.add('d-none');
                 userSuccessLogin.classList.remove('d-none');
                 window.location.href = "product.html";
