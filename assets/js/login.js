@@ -2,7 +2,6 @@
 const formLogin = document.querySelector('#form-login');
 const alertLogin = document.querySelector('#alert-login');
 const logRegContainer = document.querySelector('#log-reg-container');
-const userSuccessLogin = document.querySelector('#user-success-login');
 const usernameSuccessLogin = document.querySelector('#username-success-login');
 
 // Login

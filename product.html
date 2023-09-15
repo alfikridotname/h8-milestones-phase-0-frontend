@@ -48,17 +48,29 @@
                         <a class="nav-link" href="index.html#contact">Contact Us</a>
                     </li>
                 </ul>
-                <div class="d-flex">
+                <div id="log-reg-container" class="d-flex">
                     <div class="me-auto mb-2 mb-lg-0">
                         <!-- Basket -->
                         <a href="basket.html" class="btn btn-info">
                             <i class='bx bx-cart-alt fs-5'></i>
                             <span id="jumlah-pesanan" class="badge bg-secondary">0</span>
                         </a>
-                        <a class="btn btn-primary" href="login.html" target="frame-master">Login</a>
-                        <a class="btn btn-success" href="register.html" target="frame-master">Register</a>
+                        <a id="btn-login" class="btn btn-primary" href="login.html" target="frame-master">Login</a>
+                        <av id="btn-register" class="btn btn-success" href="register.html" target="frame-master">
+                            Register</a>
                     </div>
                 </div>
+                <ul id="user-success-login" class="navbar-nav me-auto mb-2 mb-lg-0 d-none">
+                    <li class="nav-item dropdown">
+                        <a id="username-success-login" class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="javascript:;" onclick="logout()">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -88,6 +100,7 @@
         crossorigin="anonymous"></script>
 
     <!-- Script -->
+    <script src="assets/js/check-login.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
